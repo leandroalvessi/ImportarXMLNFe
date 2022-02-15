@@ -52,8 +52,17 @@
     <Compile Include="ImportarXMLNFe.Designer.cs">
       <DependentUpon>ImportarXMLNFe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Destinatario.cs" />
+    <Compile Include="Model\Detalhe.cs" />
+    <Compile Include="Model\Emitente.cs" />
+    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Identificacao.cs" />
+    <Compile Include="Model\NFe.cs" />
+    <Compile Include="Model\NFeProc.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializable\NFeSerialization.cs" />
     <EmbeddedResource Include="ImportarXMLNFe.resx">
       <DependentUpon>ImportarXMLNFe.cs</DependentUpon>
     </EmbeddedResource>
