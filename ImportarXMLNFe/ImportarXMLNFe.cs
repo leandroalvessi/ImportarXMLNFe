@@ -31,10 +31,11 @@ namespace ImportarXMLNFe
                     FileInfo[] Arquivos = diretorio.GetFiles("*.xml");
 
                     NFeSerialization serializable = new NFeSerialization();
+
+                    dataGridView.Rows.Clear();
                     foreach (FileInfo fileinfo in Arquivos)
                     {
-                        
-                        var nfe = serializable.GetObjectFromFile<NFeProc>(txtpathFolderXml.Text + "\\" + fileinfo.Name);
+                        AtualizarGrid(serializable.GetObjectFromFile<NFeProc>(txtpathFolderXml.Text + "\\" + fileinfo.Name));
                     }
 
                 }
@@ -43,6 +44,18 @@ namespace ImportarXMLNFe
             {
 
                 MessageBox.Show("Falha no processo de leitura do arquivo xml da Nota Fiscal.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void AtualizarGrid(NFeProc nfe)
+        {
+            if (nfe != null)
+            {
+                dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                      nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.mod,
+                                      nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.serie.ToString(),
+                                      nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
+                                      nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.natOp);
             }
         }
     }
