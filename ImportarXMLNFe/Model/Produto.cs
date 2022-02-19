@@ -10,5 +10,6 @@
         public string uCom { get; set; }
         public double qCom { get; set; }
         public double vUnCom { get; set; }
+        public double vProd { get; set; }
     }
 }

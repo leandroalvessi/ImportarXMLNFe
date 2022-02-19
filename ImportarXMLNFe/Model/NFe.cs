@@ -25,6 +25,9 @@ namespace ImportarXMLNFe.Model
 
             [XmlElement("det")]
             public List<Detalhe> Detalhe { get; set; }
+
+            [XmlElement("total")]
+            public Total Total { get; set; }
         }
     }
 }
