@@ -13,7 +13,7 @@ namespace ImportarXMLNFe
 {
     public partial class DetalheXMLNFe : Form
     {
-        public DetalheXMLNFe(Identificacao i) 
+        public DetalheXMLNFe(Identificacao i, Emitente em, Endereco enEmi, Destinatario d, Endereco enDes) 
         { 
            InitializeComponent();
             
@@ -23,6 +23,29 @@ namespace ImportarXMLNFe
             txtModelo.Text = i.mod;
             txtSerie.Text = i.serie.ToString();
             txtDataEmissao.Text = i.dhEmi.ToShortDateString();
+
+            /* Populando tab Emitente */
+            txtRazaoSocial.Text = em.xNome;
+            txtNomeFantasia.Text = em.xFant;
+            txtCpfCnpjEmitente.Text = em.CNPJ;
+            txtInscricaoEstadual.Text = em.IE;
+
+            txtLogradouroEmitente.Text = enEmi.xLgr;
+            txtNroEmitente.Text = enEmi.nro;
+            txtMunicipioEmitente.Text = enEmi.xMun;
+            txtUFEmitente.Text = enEmi.UF;
+
+            /* Populando tab Destinatário */
+            txtDestNomeFantasia.Text = d.xNome;
+            txtDestCpfCnpj.Text = d.CNPJ;
+            txtDestEmail.Text = d.email;
+
+            txtDestLogradouro.Text = enDes.xLgr;
+            txtDestNumero.Text = enDes.nro;
+            txtDestMunicipio.Text = enDes.xMun;
+            txtDestUF.Text = enDes.UF;
+            txtDestCEP.Text = enDes.CEP;
+            txtDestBairro.Text = enDes.xBairro;
         }
     }
 }
