@@ -34,13 +34,13 @@
             this.txtpathFolderXml = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataEmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorTotalNotaFiscal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesNomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesCPFCNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesMunicipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesUF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nNF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dhEmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vNF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CpfCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xMun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -84,13 +84,13 @@
             this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Numero,
-            this.DataEmissao,
-            this.ValorTotalNotaFiscal,
-            this.DesNomeFantasia,
-            this.DesCPFCNPJ,
-            this.DesMunicipio,
-            this.DesUF,
+            this.nNF,
+            this.dhEmi,
+            this.vNF,
+            this.xNome,
+            this.CpfCnpj,
+            this.xMun,
+            this.UF,
             this.CEP});
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.Location = new System.Drawing.Point(12, 41);
@@ -103,55 +103,55 @@
             this.dataGridView.TabIndex = 27;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
-            // Numero
+            // nNF
             // 
-            this.Numero.HeaderText = "Número";
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 80;
+            this.nNF.HeaderText = "Número";
+            this.nNF.Name = "nNF";
+            this.nNF.ReadOnly = true;
+            this.nNF.Width = 80;
             // 
-            // DataEmissao
+            // dhEmi
             // 
-            this.DataEmissao.HeaderText = "Data Emissão";
-            this.DataEmissao.Name = "DataEmissao";
-            this.DataEmissao.ReadOnly = true;
+            this.dhEmi.HeaderText = "Data Emissão";
+            this.dhEmi.Name = "dhEmi";
+            this.dhEmi.ReadOnly = true;
             // 
-            // ValorTotalNotaFiscal
+            // vNF
             // 
             dataGridViewCellStyle2.Format = "C2";
             dataGridViewCellStyle2.NullValue = null;
-            this.ValorTotalNotaFiscal.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ValorTotalNotaFiscal.HeaderText = "Valor Nota Fiscal";
-            this.ValorTotalNotaFiscal.Name = "ValorTotalNotaFiscal";
-            this.ValorTotalNotaFiscal.ReadOnly = true;
-            this.ValorTotalNotaFiscal.Width = 120;
+            this.vNF.DefaultCellStyle = dataGridViewCellStyle2;
+            this.vNF.HeaderText = "Valor Nota Fiscal";
+            this.vNF.Name = "vNF";
+            this.vNF.ReadOnly = true;
+            this.vNF.Width = 120;
             // 
-            // DesNomeFantasia
+            // xNome
             // 
-            this.DesNomeFantasia.HeaderText = "Nome Fantasia";
-            this.DesNomeFantasia.Name = "DesNomeFantasia";
-            this.DesNomeFantasia.ReadOnly = true;
-            this.DesNomeFantasia.Width = 300;
+            this.xNome.HeaderText = "Nome Fantasia";
+            this.xNome.Name = "xNome";
+            this.xNome.ReadOnly = true;
+            this.xNome.Width = 300;
             // 
-            // DesCPFCNPJ
+            // CpfCnpj
             // 
-            this.DesCPFCNPJ.HeaderText = "CPF/CNPJ";
-            this.DesCPFCNPJ.Name = "DesCPFCNPJ";
-            this.DesCPFCNPJ.ReadOnly = true;
-            this.DesCPFCNPJ.Width = 150;
+            this.CpfCnpj.HeaderText = "CPF/CNPJ";
+            this.CpfCnpj.Name = "CpfCnpj";
+            this.CpfCnpj.ReadOnly = true;
+            this.CpfCnpj.Width = 150;
             // 
-            // DesMunicipio
+            // xMun
             // 
-            this.DesMunicipio.HeaderText = "Município";
-            this.DesMunicipio.Name = "DesMunicipio";
-            this.DesMunicipio.ReadOnly = true;
+            this.xMun.HeaderText = "Município";
+            this.xMun.Name = "xMun";
+            this.xMun.ReadOnly = true;
             // 
-            // DesUF
+            // UF
             // 
-            this.DesUF.HeaderText = "UF";
-            this.DesUF.Name = "DesUF";
-            this.DesUF.ReadOnly = true;
-            this.DesUF.Width = 50;
+            this.UF.HeaderText = "UF";
+            this.UF.Name = "UF";
+            this.UF.ReadOnly = true;
+            this.UF.Width = 50;
             // 
             // CEP
             // 
@@ -183,13 +183,13 @@
         private System.Windows.Forms.TextBox txtpathFolderXml;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         public System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataEmissao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotalNotaFiscal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesNomeFantasia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesCPFCNPJ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesMunicipio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesUF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nNF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dhEmi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vNF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CpfCnpj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xMun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UF;
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
     }
 }

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbIdentificacao = new System.Windows.Forms.TabPage();
             this.txtDataEmissao = new System.Windows.Forms.TextBox();
@@ -79,12 +82,21 @@
             this.txtDestNomeFantasia = new System.Windows.Forms.TextBox();
             this.lblDestNomeFantasia = new System.Windows.Forms.Label();
             this.tbItens = new System.Windows.Forms.TabPage();
+            this.dataGridViewItens = new System.Windows.Forms.DataGridView();
+            this.cProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vUnCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
             this.tbDestinatario.SuspendLayout();
             this.gbEnderecoDestinatario.SuspendLayout();
+            this.tbItens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -633,6 +645,7 @@
             // 
             // tbItens
             // 
+            this.tbItens.Controls.Add(this.dataGridViewItens);
             this.tbItens.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbItens.Location = new System.Drawing.Point(4, 22);
             this.tbItens.Name = "tbItens";
@@ -640,6 +653,81 @@
             this.tbItens.TabIndex = 3;
             this.tbItens.Text = "Itens";
             this.tbItens.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewItens
+            // 
+            this.dataGridViewItens.AllowUserToAddRows = false;
+            this.dataGridViewItens.AllowUserToDeleteRows = false;
+            this.dataGridViewItens.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cProd,
+            this.xProd,
+            this.uCom,
+            this.qCom,
+            this.vUnCom,
+            this.vProd});
+            this.dataGridViewItens.EnableHeadersVisualStyles = false;
+            this.dataGridViewItens.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewItens.MultiSelect = false;
+            this.dataGridViewItens.Name = "dataGridViewItens";
+            this.dataGridViewItens.ReadOnly = true;
+            this.dataGridViewItens.RowHeadersVisible = false;
+            this.dataGridViewItens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewItens.Size = new System.Drawing.Size(388, 263);
+            this.dataGridViewItens.TabIndex = 0;
+            // 
+            // cProd
+            // 
+            this.cProd.HeaderText = "Código";
+            this.cProd.Name = "cProd";
+            this.cProd.ReadOnly = true;
+            this.cProd.Width = 50;
+            // 
+            // xProd
+            // 
+            this.xProd.HeaderText = "Descrição";
+            this.xProd.Name = "xProd";
+            this.xProd.ReadOnly = true;
+            this.xProd.Width = 200;
+            // 
+            // uCom
+            // 
+            this.uCom.HeaderText = "Unidade";
+            this.uCom.Name = "uCom";
+            this.uCom.ReadOnly = true;
+            this.uCom.Width = 60;
+            // 
+            // qCom
+            // 
+            dataGridViewCellStyle1.NullValue = null;
+            this.qCom.DefaultCellStyle = dataGridViewCellStyle1;
+            this.qCom.HeaderText = "Quantidade";
+            this.qCom.Name = "qCom";
+            this.qCom.ReadOnly = true;
+            this.qCom.Width = 80;
+            // 
+            // vUnCom
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.vUnCom.DefaultCellStyle = dataGridViewCellStyle2;
+            this.vUnCom.HeaderText = "Valor Unitário";
+            this.vUnCom.Name = "vUnCom";
+            this.vUnCom.ReadOnly = true;
+            this.vUnCom.Width = 150;
+            // 
+            // vProd
+            // 
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.vProd.DefaultCellStyle = dataGridViewCellStyle3;
+            this.vProd.HeaderText = "Valor Produto";
+            this.vProd.Name = "vProd";
+            this.vProd.ReadOnly = true;
+            this.vProd.Width = 150;
             // 
             // DetalheXMLNFe
             // 
@@ -661,6 +749,8 @@
             this.tbDestinatario.PerformLayout();
             this.gbEnderecoDestinatario.ResumeLayout(false);
             this.gbEnderecoDestinatario.PerformLayout();
+            this.tbItens.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -718,5 +808,12 @@
         private System.Windows.Forms.TextBox txtDestNomeFantasia;
         private System.Windows.Forms.Label lblDestNomeFantasia;
         private System.Windows.Forms.TabPage tbItens;
+        public System.Windows.Forms.DataGridView dataGridViewItens;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uCom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qCom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vUnCom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vProd;
     }
 }

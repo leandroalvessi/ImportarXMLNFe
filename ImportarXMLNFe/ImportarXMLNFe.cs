@@ -35,6 +35,7 @@ namespace ImportarXMLNFe
                     NFeSerialization serializable = new NFeSerialization();
 
                     dataGridView.Rows.Clear();
+                    listaNFeProc.Clear();
                     foreach (FileInfo fileinfo in Arquivos)
                     {
                         AtualizarGrid(serializable.GetObjectFromFile<NFeProc>(txtpathFolderXml.Text + "\\" + fileinfo.Name));
@@ -78,8 +79,6 @@ namespace ImportarXMLNFe
                                           nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.UF,
                                           nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP);
                 }
-
-
             }
         }
 
