@@ -52,7 +52,7 @@
             this.btnLerFolderXml.Location = new System.Drawing.Point(561, 12);
             this.btnLerFolderXml.Name = "btnLerFolderXml";
             this.btnLerFolderXml.Size = new System.Drawing.Size(32, 23);
-            this.btnLerFolderXml.TabIndex = 3;
+            this.btnLerFolderXml.TabIndex = 2;
             this.btnLerFolderXml.Text = "...";
             this.btnLerFolderXml.UseVisualStyleBackColor = true;
             this.btnLerFolderXml.Click += new System.EventHandler(this.btnLerFolderXml_Click);
@@ -65,7 +65,7 @@
             this.txtpathFolderXml.Name = "txtpathFolderXml";
             this.txtpathFolderXml.ReadOnly = true;
             this.txtpathFolderXml.Size = new System.Drawing.Size(543, 23);
-            this.txtpathFolderXml.TabIndex = 2;
+            this.txtpathFolderXml.TabIndex = 1;
             // 
             // dataGridView
             // 
@@ -99,9 +99,10 @@
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(581, 299);
-            this.dataGridView.TabIndex = 27;
+            this.dataGridView.Size = new System.Drawing.Size(1010, 508);
+            this.dataGridView.TabIndex = 3;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
+            this.dataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView_KeyPress);
             // 
             // nNF
             // 
@@ -163,14 +164,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 352);
+            this.ClientSize = new System.Drawing.Size(1034, 561);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnLerFolderXml);
             this.Controls.Add(this.txtpathFolderXml);
             this.Name = "FormImportarXMLNFe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importar XML NFe/NFC-e";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

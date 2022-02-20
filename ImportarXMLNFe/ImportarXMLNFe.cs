@@ -92,5 +92,19 @@ namespace ImportarXMLNFe
                 detalhe.ShowDialog();
             }
         }
+
+        private void dataGridView_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (dataGridView.Rows.Count > 0 && dataGridView.SelectedRows.Count > 0)
+                {
+                    var nfe = listaNFeProc.Find(x => x.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF == dataGridView.SelectedRows[0].Cells[0].Value);
+
+                    DetalheXMLNFe detalhe = new DetalheXMLNFe(nfe);
+                    detalhe.ShowDialog();
+                }
+            }
+        }
     }
 }

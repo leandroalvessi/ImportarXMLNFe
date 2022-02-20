@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbIdentificacao = new System.Windows.Forms.TabPage();
             this.txtDataEmissao = new System.Windows.Forms.TextBox();
@@ -140,7 +140,7 @@
             this.txtDataEmissao.Name = "txtDataEmissao";
             this.txtDataEmissao.ReadOnly = true;
             this.txtDataEmissao.Size = new System.Drawing.Size(89, 23);
-            this.txtDataEmissao.TabIndex = 9;
+            this.txtDataEmissao.TabIndex = 5;
             // 
             // txtSerie
             // 
@@ -150,7 +150,7 @@
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.ReadOnly = true;
             this.txtSerie.Size = new System.Drawing.Size(45, 23);
-            this.txtSerie.TabIndex = 8;
+            this.txtSerie.TabIndex = 4;
             // 
             // txtModelo
             // 
@@ -160,7 +160,7 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.ReadOnly = true;
             this.txtModelo.Size = new System.Drawing.Size(45, 23);
-            this.txtModelo.TabIndex = 7;
+            this.txtModelo.TabIndex = 3;
             // 
             // txtNumero
             // 
@@ -170,7 +170,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.ReadOnly = true;
             this.txtNumero.Size = new System.Drawing.Size(103, 23);
-            this.txtNumero.TabIndex = 6;
+            this.txtNumero.TabIndex = 2;
             // 
             // lblData
             // 
@@ -278,7 +278,7 @@
             this.txtUFEmitente.Name = "txtUFEmitente";
             this.txtUFEmitente.ReadOnly = true;
             this.txtUFEmitente.Size = new System.Drawing.Size(55, 22);
-            this.txtUFEmitente.TabIndex = 15;
+            this.txtUFEmitente.TabIndex = 8;
             // 
             // lblUFEmitente
             // 
@@ -298,7 +298,7 @@
             this.txtMunicipioEmitente.Name = "txtMunicipioEmitente";
             this.txtMunicipioEmitente.ReadOnly = true;
             this.txtMunicipioEmitente.Size = new System.Drawing.Size(277, 22);
-            this.txtMunicipioEmitente.TabIndex = 13;
+            this.txtMunicipioEmitente.TabIndex = 7;
             // 
             // lblMunicipioEmitente
             // 
@@ -318,7 +318,7 @@
             this.txtNroEmitente.Name = "txtNroEmitente";
             this.txtNroEmitente.ReadOnly = true;
             this.txtNroEmitente.Size = new System.Drawing.Size(55, 22);
-            this.txtNroEmitente.TabIndex = 11;
+            this.txtNroEmitente.TabIndex = 6;
             // 
             // lblNroEmitente
             // 
@@ -338,7 +338,7 @@
             this.txtLogradouroEmitente.Name = "txtLogradouroEmitente";
             this.txtLogradouroEmitente.ReadOnly = true;
             this.txtLogradouroEmitente.Size = new System.Drawing.Size(277, 22);
-            this.txtLogradouroEmitente.TabIndex = 9;
+            this.txtLogradouroEmitente.TabIndex = 5;
             // 
             // lblLogradouro
             // 
@@ -357,7 +357,7 @@
             this.txtInscricaoEstadual.Name = "txtInscricaoEstadual";
             this.txtInscricaoEstadual.ReadOnly = true;
             this.txtInscricaoEstadual.Size = new System.Drawing.Size(142, 22);
-            this.txtInscricaoEstadual.TabIndex = 9;
+            this.txtInscricaoEstadual.TabIndex = 4;
             // 
             // lblInscricaoEstadual
             // 
@@ -376,7 +376,7 @@
             this.txtCpfCnpjEmitente.Name = "txtCpfCnpjEmitente";
             this.txtCpfCnpjEmitente.ReadOnly = true;
             this.txtCpfCnpjEmitente.Size = new System.Drawing.Size(131, 22);
-            this.txtCpfCnpjEmitente.TabIndex = 7;
+            this.txtCpfCnpjEmitente.TabIndex = 3;
             // 
             // lblCpfCnpj
             // 
@@ -395,7 +395,7 @@
             this.txtNomeFantasia.Name = "txtNomeFantasia";
             this.txtNomeFantasia.ReadOnly = true;
             this.txtNomeFantasia.Size = new System.Drawing.Size(370, 22);
-            this.txtNomeFantasia.TabIndex = 5;
+            this.txtNomeFantasia.TabIndex = 2;
             // 
             // lblNomeFantasia
             // 
@@ -414,7 +414,7 @@
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.ReadOnly = true;
             this.txtRazaoSocial.Size = new System.Drawing.Size(370, 22);
-            this.txtRazaoSocial.TabIndex = 3;
+            this.txtRazaoSocial.TabIndex = 1;
             // 
             // lblRazaoSocial
             // 
@@ -451,7 +451,7 @@
             this.txtDestEmail.Name = "txtDestEmail";
             this.txtDestEmail.ReadOnly = true;
             this.txtDestEmail.Size = new System.Drawing.Size(230, 22);
-            this.txtDestEmail.TabIndex = 13;
+            this.txtDestEmail.TabIndex = 3;
             // 
             // lblDestEmail
             // 
@@ -493,7 +493,7 @@
             this.txtDestBairro.Name = "txtDestBairro";
             this.txtDestBairro.ReadOnly = true;
             this.txtDestBairro.Size = new System.Drawing.Size(214, 22);
-            this.txtDestBairro.TabIndex = 19;
+            this.txtDestBairro.TabIndex = 9;
             // 
             // lblDestBairro
             // 
@@ -513,7 +513,7 @@
             this.txtDestCEP.Name = "txtDestCEP";
             this.txtDestCEP.ReadOnly = true;
             this.txtDestCEP.Size = new System.Drawing.Size(119, 22);
-            this.txtDestCEP.TabIndex = 17;
+            this.txtDestCEP.TabIndex = 8;
             // 
             // lblDestCEP
             // 
@@ -533,7 +533,7 @@
             this.txtDestUF.Name = "txtDestUF";
             this.txtDestUF.ReadOnly = true;
             this.txtDestUF.Size = new System.Drawing.Size(55, 22);
-            this.txtDestUF.TabIndex = 15;
+            this.txtDestUF.TabIndex = 7;
             // 
             // lblDestUF
             // 
@@ -553,7 +553,7 @@
             this.txtDestMunicipio.Name = "txtDestMunicipio";
             this.txtDestMunicipio.ReadOnly = true;
             this.txtDestMunicipio.Size = new System.Drawing.Size(277, 22);
-            this.txtDestMunicipio.TabIndex = 13;
+            this.txtDestMunicipio.TabIndex = 6;
             // 
             // lblDestMunicipio
             // 
@@ -573,7 +573,7 @@
             this.txtDestNumero.Name = "txtDestNumero";
             this.txtDestNumero.ReadOnly = true;
             this.txtDestNumero.Size = new System.Drawing.Size(55, 22);
-            this.txtDestNumero.TabIndex = 11;
+            this.txtDestNumero.TabIndex = 5;
             // 
             // lblDestNumero
             // 
@@ -593,7 +593,7 @@
             this.txtDestLogradouro.Name = "txtDestLogradouro";
             this.txtDestLogradouro.ReadOnly = true;
             this.txtDestLogradouro.Size = new System.Drawing.Size(277, 22);
-            this.txtDestLogradouro.TabIndex = 9;
+            this.txtDestLogradouro.TabIndex = 4;
             // 
             // lblDestLogradouro
             // 
@@ -612,7 +612,7 @@
             this.txtDestCpfCnpj.Name = "txtDestCpfCnpj";
             this.txtDestCpfCnpj.ReadOnly = true;
             this.txtDestCpfCnpj.Size = new System.Drawing.Size(131, 22);
-            this.txtDestCpfCnpj.TabIndex = 9;
+            this.txtDestCpfCnpj.TabIndex = 2;
             // 
             // lblDestCpfCnpj
             // 
@@ -631,7 +631,7 @@
             this.txtDestNomeFantasia.Name = "txtDestNomeFantasia";
             this.txtDestNomeFantasia.ReadOnly = true;
             this.txtDestNomeFantasia.Size = new System.Drawing.Size(370, 22);
-            this.txtDestNomeFantasia.TabIndex = 5;
+            this.txtDestNomeFantasia.TabIndex = 1;
             // 
             // lblDestNomeFantasia
             // 
@@ -702,8 +702,8 @@
             // 
             // qCom
             // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.qCom.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.NullValue = null;
+            this.qCom.DefaultCellStyle = dataGridViewCellStyle16;
             this.qCom.HeaderText = "Quantidade";
             this.qCom.Name = "qCom";
             this.qCom.ReadOnly = true;
@@ -711,9 +711,9 @@
             // 
             // vUnCom
             // 
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.vUnCom.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Format = "C2";
+            dataGridViewCellStyle17.NullValue = null;
+            this.vUnCom.DefaultCellStyle = dataGridViewCellStyle17;
             this.vUnCom.HeaderText = "Valor Unitário";
             this.vUnCom.Name = "vUnCom";
             this.vUnCom.ReadOnly = true;
@@ -721,9 +721,9 @@
             // 
             // vProd
             // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.vProd.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Format = "C2";
+            dataGridViewCellStyle18.NullValue = null;
+            this.vProd.DefaultCellStyle = dataGridViewCellStyle18;
             this.vProd.HeaderText = "Valor Produto";
             this.vProd.Name = "vProd";
             this.vProd.ReadOnly = true;
@@ -735,6 +735,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 317);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
             this.Name = "DetalheXMLNFe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalhes NFe/NFC-e";
