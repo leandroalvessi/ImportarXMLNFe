@@ -13,10 +13,11 @@ namespace ImportarXMLNFe
 {
     public partial class DetalheXMLNFe : Form
     {
+
         public DetalheXMLNFe(NFeProc nfe) 
         { 
             InitializeComponent();
-            
+
             txtNaturezaOperacao.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.natOp;
             txtNumero.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF;
             txtModelo.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.mod;

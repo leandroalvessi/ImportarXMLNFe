@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbIdentificacao = new System.Windows.Forms.TabPage();
             this.txtDataEmissao = new System.Windows.Forms.TextBox();
@@ -702,8 +702,8 @@
             // 
             // qCom
             // 
-            dataGridViewCellStyle16.NullValue = null;
-            this.qCom.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.NullValue = null;
+            this.qCom.DefaultCellStyle = dataGridViewCellStyle1;
             this.qCom.HeaderText = "Quantidade";
             this.qCom.Name = "qCom";
             this.qCom.ReadOnly = true;
@@ -711,9 +711,9 @@
             // 
             // vUnCom
             // 
-            dataGridViewCellStyle17.Format = "C2";
-            dataGridViewCellStyle17.NullValue = null;
-            this.vUnCom.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.vUnCom.DefaultCellStyle = dataGridViewCellStyle2;
             this.vUnCom.HeaderText = "Valor Unitário";
             this.vUnCom.Name = "vUnCom";
             this.vUnCom.ReadOnly = true;
@@ -721,9 +721,9 @@
             // 
             // vProd
             // 
-            dataGridViewCellStyle18.Format = "C2";
-            dataGridViewCellStyle18.NullValue = null;
-            this.vProd.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.vProd.DefaultCellStyle = dataGridViewCellStyle3;
             this.vProd.HeaderText = "Valor Produto";
             this.vProd.Name = "vProd";
             this.vProd.ReadOnly = true;

@@ -42,6 +42,7 @@
             this.xMun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +92,8 @@
             this.CpfCnpj,
             this.xMun,
             this.UF,
-            this.CEP});
+            this.CEP,
+            this.Path});
             this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.Location = new System.Drawing.Point(12, 41);
             this.dataGridView.MultiSelect = false;
@@ -160,6 +162,13 @@
             this.CEP.Name = "CEP";
             this.CEP.ReadOnly = true;
             // 
+            // Path
+            // 
+            this.Path.HeaderText = "Path";
+            this.Path.Name = "Path";
+            this.Path.ReadOnly = true;
+            this.Path.Visible = false;
+            // 
             // FormImportarXMLNFe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +200,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn xMun;
         private System.Windows.Forms.DataGridViewTextBoxColumn UF;
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Path;
     }
 }
 
