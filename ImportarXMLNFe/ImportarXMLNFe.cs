@@ -16,6 +16,9 @@ namespace ImportarXMLNFe
         {
             InitializeComponent();
             ACBrNFe = new ACBrNFe();
+
+            dtaInicio.Value = new DateTime(DateTime.Now.Year, 1, 1);
+            dtaFim.Value = new DateTime(DateTime.Now.Year, 12, 31);
         }
         public void AtualizarGrid(NFeProc nfe, string path)
         {
@@ -95,23 +98,58 @@ namespace ImportarXMLNFe
 
         private void btnLerFolderXml_Click(object sender, EventArgs e)
         {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txtpathFolderXml.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void dtaInicio_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (ValidarDataInicialFinal())
+            {
+               dtaInicio.Focus();
+            }
+
+        }
+        private bool ValidarDataInicialFinal()
+        {
+            if (dtaInicio.Value > dtaFim.Value)
+            {
+                MessageBox.Show("A Data final não pode ser menor que a data inicial");
+                return true;
+            }
+            return false;
+        }
+
+        private void dtaFim_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (ValidarDataInicialFinal())
+            {
+                dtaFim.Focus();
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BuscarXML(txtpathFolderXml.Text);
+        }
+
+        private void BuscarXML(string strPath)
+        {
             try
             {
-                if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    txtpathFolderXml.Text = folderBrowserDialog1.SelectedPath;
-                    DirectoryInfo diretorio = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
-                    FileInfo[] Arquivos = diretorio.GetFiles("*.xml");
+                DirectoryInfo diretorio = new DirectoryInfo(strPath);
+                FileInfo[] Arquivos = diretorio.GetFiles("*.xml");
 
-                    NFeSerialization serializable = new NFeSerialization();
+                NFeSerialization serializable = new NFeSerialization();
 
-                    dataGridView.Rows.Clear();
-                    listaNFeProc.Clear();
-                    foreach (FileInfo fileinfo in Arquivos)
-                    {
-                        AtualizarGrid(serializable.GetObjectFromFile<NFeProc>(txtpathFolderXml.Text + "\\" + fileinfo.Name), txtpathFolderXml.Text + "\\" + fileinfo.Name);
-                    }
-                }
+                dataGridView.Rows.Clear();
+                listaNFeProc.Clear();
+            foreach (FileInfo fileinfo in Arquivos)
+            {
+                AtualizarGrid(serializable.GetObjectFromFile<NFeProc>(txtpathFolderXml.Text + "\\" + fileinfo.Name), txtpathFolderXml.Text + "\\" + fileinfo.Name);
+            }
             }
             catch (Exception)
             {
