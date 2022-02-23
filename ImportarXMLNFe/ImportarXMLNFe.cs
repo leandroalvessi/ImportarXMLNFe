@@ -24,33 +24,38 @@ namespace ImportarXMLNFe
         {
             if (nfe != null)
             {
-                listaNFeProc.Add(nfe);
-                if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario == null)
+                if ((nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.Date >= dtaInicio.Value) &&
+                    (nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.Date <= dtaFim.Value))
                 {
-                    dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF,
-                                          path);
+                    listaNFeProc.Add(nfe);
+                    if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario == null)
+                    {
+                        dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF,
+                                              path);
+                    }
+                    else if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco == null)
+                    {
+                        dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF, path,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome,
+                                              string.IsNullOrEmpty(nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ) ? nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CPF : nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ);
+                    }
+                    else
+                    {
+                        dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF, path,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome,
+                                              string.IsNullOrEmpty(nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ) ? nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CPF : nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xMun,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.UF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP);
+                    }
                 }
-                else if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco == null)
-                {
-                    dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF, path,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome,
-                                          string.IsNullOrEmpty(nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ) ? nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CPF : nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ);
-                }
-                else
-                {
-                    dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF, path,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome,
-                                          string.IsNullOrEmpty(nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ) ? nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CPF : nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xMun,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.UF,
-                                          nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP);
-                }
+
             }
         }
         private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -95,7 +100,6 @@ namespace ImportarXMLNFe
                 }
             } 
         }
-
         private void btnLerFolderXml_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -116,7 +120,7 @@ namespace ImportarXMLNFe
         {
             if (dtaInicio.Value > dtaFim.Value)
             {
-                MessageBox.Show("A Data final não pode ser menor que a data inicial");
+                MessageBox.Show("A Data final não pode ser menor que a data inicial!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
             return false;
@@ -132,7 +136,15 @@ namespace ImportarXMLNFe
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BuscarXML(txtpathFolderXml.Text);
+            if (string.IsNullOrEmpty(txtpathFolderXml.Text))
+            {
+                MessageBox.Show("Não foi informado o caminho para os arquivos XML.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnLerFolderXml.Focus();
+            }
+            else
+            {
+                BuscarXML(txtpathFolderXml.Text);
+            }
         }
 
         private void BuscarXML(string strPath)
@@ -154,6 +166,10 @@ namespace ImportarXMLNFe
             catch (Exception)
             {
                 MessageBox.Show("Falha no processo de leitura do arquivo xml da Nota Fiscal.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (listaNFeProc.Count == 0)
+            {
+                MessageBox.Show("Nenhuma XML de NF-e/NFC-e encontrada para o período informado!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
