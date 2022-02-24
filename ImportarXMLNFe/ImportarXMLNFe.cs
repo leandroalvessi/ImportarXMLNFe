@@ -169,7 +169,7 @@ namespace ImportarXMLNFe
             }
             if (listaNFeProc.Count == 0)
             {
-                MessageBox.Show("Nenhuma XML de NF-e/NFC-e encontrada para o período informado!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nenhuma XML de NF-e/NFC-e encontrado para o período informado!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

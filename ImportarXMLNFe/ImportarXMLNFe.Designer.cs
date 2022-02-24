@@ -178,7 +178,7 @@
             this.btnLerFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLerFolderXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLerFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLerFolderXml.Location = new System.Drawing.Point(401, 19);
+            this.btnLerFolderXml.Location = new System.Drawing.Point(401, 20);
             this.btnLerFolderXml.Name = "btnLerFolderXml";
             this.btnLerFolderXml.Size = new System.Drawing.Size(39, 23);
             this.btnLerFolderXml.TabIndex = 2;
@@ -190,11 +190,11 @@
             // 
             this.txtpathFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtpathFolderXml.BackColor = System.Drawing.SystemColors.Control;
             this.txtpathFolderXml.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpathFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpathFolderXml.Location = new System.Drawing.Point(6, 19);
+            this.txtpathFolderXml.Location = new System.Drawing.Point(6, 20);
             this.txtpathFolderXml.Name = "txtpathFolderXml";
-            this.txtpathFolderXml.ReadOnly = true;
             this.txtpathFolderXml.Size = new System.Drawing.Size(389, 23);
             this.txtpathFolderXml.TabIndex = 1;
             this.txtpathFolderXml.TabStop = false;
@@ -213,7 +213,7 @@
             // chkVisualizarPdf
             // 
             this.chkVisualizarPdf.AutoSize = true;
-            this.chkVisualizarPdf.Location = new System.Drawing.Point(7, 24);
+            this.chkVisualizarPdf.Location = new System.Drawing.Point(7, 25);
             this.chkVisualizarPdf.Name = "chkVisualizarPdf";
             this.chkVisualizarPdf.Size = new System.Drawing.Size(47, 17);
             this.chkVisualizarPdf.TabIndex = 0;
@@ -265,7 +265,7 @@
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(6, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(6, 20);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(136, 23);
             this.btnBuscar.TabIndex = 0;
