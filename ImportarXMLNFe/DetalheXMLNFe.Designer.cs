@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalheXMLNFe));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tbIdentificacao = new System.Windows.Forms.TabPage();
             this.txtDataEmissao = new System.Windows.Forms.TextBox();
             this.txtSerie = new System.Windows.Forms.TextBox();
@@ -90,7 +90,7 @@
             this.qCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vUnCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.tbIdentificacao.SuspendLayout();
             this.tbEmitente.SuspendLayout();
             this.gbEnderecoEmitente.SuspendLayout();
@@ -100,17 +100,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItens)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.tbIdentificacao);
-            this.tabControl1.Controls.Add(this.tbEmitente);
-            this.tabControl1.Controls.Add(this.tbDestinatario);
-            this.tabControl1.Controls.Add(this.tbItens);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(402, 295);
-            this.tabControl1.TabIndex = 3;
+            this.tabControl.Controls.Add(this.tbIdentificacao);
+            this.tabControl.Controls.Add(this.tbEmitente);
+            this.tabControl.Controls.Add(this.tbDestinatario);
+            this.tabControl.Controls.Add(this.tbItens);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(402, 295);
+            this.tabControl.TabIndex = 3;
             // 
             // tbIdentificacao
             // 
@@ -135,6 +135,7 @@
             // 
             // txtDataEmissao
             // 
+            this.txtDataEmissao.BackColor = System.Drawing.SystemColors.Window;
             this.txtDataEmissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDataEmissao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDataEmissao.Location = new System.Drawing.Point(292, 79);
@@ -145,7 +146,7 @@
             // 
             // txtSerie
             // 
-            this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSerie.BackColor = System.Drawing.SystemColors.Window;
             this.txtSerie.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSerie.Location = new System.Drawing.Point(221, 79);
             this.txtSerie.Name = "txtSerie";
@@ -155,7 +156,7 @@
             // 
             // txtModelo
             // 
-            this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtModelo.BackColor = System.Drawing.SystemColors.Window;
             this.txtModelo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(136, 79);
             this.txtModelo.Name = "txtModelo";
@@ -165,7 +166,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumero.BackColor = System.Drawing.SystemColors.Window;
             this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(11, 79);
             this.txtNumero.Name = "txtNumero";
@@ -215,12 +216,12 @@
             // 
             // txtNaturezaOperacao
             // 
-            this.txtNaturezaOperacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNaturezaOperacao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNaturezaOperacao.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNaturezaOperacao.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNaturezaOperacao.Location = new System.Drawing.Point(11, 25);
             this.txtNaturezaOperacao.Name = "txtNaturezaOperacao";
             this.txtNaturezaOperacao.ReadOnly = true;
-            this.txtNaturezaOperacao.Size = new System.Drawing.Size(370, 23);
+            this.txtNaturezaOperacao.Size = new System.Drawing.Size(370, 22);
             this.txtNaturezaOperacao.TabIndex = 1;
             // 
             // lblNaturezaOperacao
@@ -273,7 +274,7 @@
             // 
             // txtUFEmitente
             // 
-            this.txtUFEmitente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUFEmitente.BackColor = System.Drawing.SystemColors.Window;
             this.txtUFEmitente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUFEmitente.Location = new System.Drawing.Point(298, 75);
             this.txtUFEmitente.Name = "txtUFEmitente";
@@ -293,7 +294,7 @@
             // 
             // txtMunicipioEmitente
             // 
-            this.txtMunicipioEmitente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMunicipioEmitente.BackColor = System.Drawing.SystemColors.Window;
             this.txtMunicipioEmitente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipioEmitente.Location = new System.Drawing.Point(11, 75);
             this.txtMunicipioEmitente.Name = "txtMunicipioEmitente";
@@ -313,7 +314,7 @@
             // 
             // txtNroEmitente
             // 
-            this.txtNroEmitente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNroEmitente.BackColor = System.Drawing.SystemColors.Window;
             this.txtNroEmitente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNroEmitente.Location = new System.Drawing.Point(298, 34);
             this.txtNroEmitente.Name = "txtNroEmitente";
@@ -333,7 +334,7 @@
             // 
             // txtLogradouroEmitente
             // 
-            this.txtLogradouroEmitente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogradouroEmitente.BackColor = System.Drawing.SystemColors.Window;
             this.txtLogradouroEmitente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogradouroEmitente.Location = new System.Drawing.Point(11, 34);
             this.txtLogradouroEmitente.Name = "txtLogradouroEmitente";
@@ -353,7 +354,7 @@
             // 
             // txtInscricaoEstadual
             // 
-            this.txtInscricaoEstadual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInscricaoEstadual.BackColor = System.Drawing.SystemColors.Window;
             this.txtInscricaoEstadual.Location = new System.Drawing.Point(239, 107);
             this.txtInscricaoEstadual.Name = "txtInscricaoEstadual";
             this.txtInscricaoEstadual.ReadOnly = true;
@@ -372,7 +373,7 @@
             // 
             // txtCpfCnpjEmitente
             // 
-            this.txtCpfCnpjEmitente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpfCnpjEmitente.BackColor = System.Drawing.SystemColors.Window;
             this.txtCpfCnpjEmitente.Location = new System.Drawing.Point(11, 107);
             this.txtCpfCnpjEmitente.Name = "txtCpfCnpjEmitente";
             this.txtCpfCnpjEmitente.ReadOnly = true;
@@ -391,7 +392,7 @@
             // 
             // txtNomeFantasia
             // 
-            this.txtNomeFantasia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeFantasia.BackColor = System.Drawing.SystemColors.Window;
             this.txtNomeFantasia.Location = new System.Drawing.Point(11, 66);
             this.txtNomeFantasia.Name = "txtNomeFantasia";
             this.txtNomeFantasia.ReadOnly = true;
@@ -410,7 +411,7 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRazaoSocial.BackColor = System.Drawing.SystemColors.Window;
             this.txtRazaoSocial.Location = new System.Drawing.Point(11, 25);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.ReadOnly = true;
@@ -447,7 +448,7 @@
             // 
             // txtDestEmail
             // 
-            this.txtDestEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestEmail.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestEmail.Location = new System.Drawing.Point(151, 69);
             this.txtDestEmail.Name = "txtDestEmail";
             this.txtDestEmail.ReadOnly = true;
@@ -488,7 +489,7 @@
             // 
             // txtDestBairro
             // 
-            this.txtDestBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestBairro.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestBairro.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDestBairro.Location = new System.Drawing.Point(139, 116);
             this.txtDestBairro.Name = "txtDestBairro";
@@ -508,7 +509,7 @@
             // 
             // txtDestCEP
             // 
-            this.txtDestCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestCEP.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestCEP.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDestCEP.Location = new System.Drawing.Point(11, 116);
             this.txtDestCEP.Name = "txtDestCEP";
@@ -528,7 +529,7 @@
             // 
             // txtDestUF
             // 
-            this.txtDestUF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestUF.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestUF.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDestUF.Location = new System.Drawing.Point(298, 75);
             this.txtDestUF.Name = "txtDestUF";
@@ -548,7 +549,7 @@
             // 
             // txtDestMunicipio
             // 
-            this.txtDestMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestMunicipio.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestMunicipio.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDestMunicipio.Location = new System.Drawing.Point(11, 75);
             this.txtDestMunicipio.Name = "txtDestMunicipio";
@@ -568,7 +569,7 @@
             // 
             // txtDestNumero
             // 
-            this.txtDestNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestNumero.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestNumero.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDestNumero.Location = new System.Drawing.Point(298, 34);
             this.txtDestNumero.Name = "txtDestNumero";
@@ -588,7 +589,7 @@
             // 
             // txtDestLogradouro
             // 
-            this.txtDestLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestLogradouro.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestLogradouro.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDestLogradouro.Location = new System.Drawing.Point(11, 34);
             this.txtDestLogradouro.Name = "txtDestLogradouro";
@@ -608,7 +609,7 @@
             // 
             // txtDestCpfCnpj
             // 
-            this.txtDestCpfCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestCpfCnpj.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestCpfCnpj.Location = new System.Drawing.Point(11, 69);
             this.txtDestCpfCnpj.Name = "txtDestCpfCnpj";
             this.txtDestCpfCnpj.ReadOnly = true;
@@ -627,7 +628,7 @@
             // 
             // txtDestNomeFantasia
             // 
-            this.txtDestNomeFantasia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDestNomeFantasia.BackColor = System.Drawing.SystemColors.Window;
             this.txtDestNomeFantasia.Location = new System.Drawing.Point(11, 25);
             this.txtDestNomeFantasia.Name = "txtDestNomeFantasia";
             this.txtDestNomeFantasia.ReadOnly = true;
@@ -662,6 +663,7 @@
             this.dataGridViewItens.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewItens.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cProd,
@@ -734,14 +736,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(421, 317);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "DetalheXMLNFe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalhes NFe/NFC-e";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tbIdentificacao.ResumeLayout(false);
             this.tbIdentificacao.PerformLayout();
             this.tbEmitente.ResumeLayout(false);
@@ -760,7 +763,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tbIdentificacao;
         private System.Windows.Forms.TextBox txtDataEmissao;
         private System.Windows.Forms.TextBox txtSerie;

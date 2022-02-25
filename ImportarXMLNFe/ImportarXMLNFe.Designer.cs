@@ -31,9 +31,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormImportarXMLNFe));
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.grpCaminho = new System.Windows.Forms.GroupBox();
+            this.btnLerFolderXml = new System.Windows.Forms.Button();
+            this.txtPathFolderXml = new System.Windows.Forms.TextBox();
+            this.grpTipoVisualizacao = new System.Windows.Forms.GroupBox();
+            this.chkVisualizarPdf = new System.Windows.Forms.CheckBox();
+            this.grpPeriodo = new System.Windows.Forms.GroupBox();
+            this.dtaFim = new System.Windows.Forms.DateTimePicker();
+            this.dtaInicio = new System.Windows.Forms.DateTimePicker();
+            this.grpBuscar = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.nNF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dhEmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vNF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,21 +53,14 @@
             this.xMun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpCaminho = new System.Windows.Forms.GroupBox();
-            this.btnLerFolderXml = new System.Windows.Forms.Button();
-            this.txtpathFolderXml = new System.Windows.Forms.TextBox();
-            this.grpTipoVisualizacao = new System.Windows.Forms.GroupBox();
-            this.chkVisualizarPdf = new System.Windows.Forms.CheckBox();
-            this.grpPeriodo = new System.Windows.Forms.GroupBox();
-            this.dtaFim = new System.Windows.Forms.DateTimePicker();
-            this.dtaInicio = new System.Windows.Forms.DateTimePicker();
-            this.grpBuscar = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.grpInscricao = new System.Windows.Forms.GroupBox();
+            this.txtCpfCnpj = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.grpCaminho.SuspendLayout();
             this.grpTipoVisualizacao.SuspendLayout();
             this.grpPeriodo.SuspendLayout();
             this.grpBuscar.SuspendLayout();
+            this.grpInscricao.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -66,6 +70,7 @@
             this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,6 +82,7 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nNF,
+            this.mod,
             this.dhEmi,
             this.vNF,
             this.Path,
@@ -97,12 +103,134 @@
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
             // 
+            // grpCaminho
+            // 
+            this.grpCaminho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpCaminho.Controls.Add(this.btnLerFolderXml);
+            this.grpCaminho.Controls.Add(this.txtPathFolderXml);
+            this.grpCaminho.Location = new System.Drawing.Point(362, 12);
+            this.grpCaminho.Name = "grpCaminho";
+            this.grpCaminho.Size = new System.Drawing.Size(401, 52);
+            this.grpCaminho.TabIndex = 2;
+            this.grpCaminho.TabStop = false;
+            this.grpCaminho.Text = "Caminho dos arquivos";
+            // 
+            // btnLerFolderXml
+            // 
+            this.btnLerFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLerFolderXml.BackColor = System.Drawing.SystemColors.Window;
+            this.btnLerFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLerFolderXml.Location = new System.Drawing.Point(356, 18);
+            this.btnLerFolderXml.Name = "btnLerFolderXml";
+            this.btnLerFolderXml.Size = new System.Drawing.Size(39, 27);
+            this.btnLerFolderXml.TabIndex = 2;
+            this.btnLerFolderXml.Text = "...";
+            this.btnLerFolderXml.UseVisualStyleBackColor = true;
+            this.btnLerFolderXml.Click += new System.EventHandler(this.btnLerFolderXml_Click);
+            // 
+            // txtPathFolderXml
+            // 
+            this.txtPathFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPathFolderXml.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPathFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPathFolderXml.Location = new System.Drawing.Point(6, 20);
+            this.txtPathFolderXml.Name = "txtPathFolderXml";
+            this.txtPathFolderXml.Size = new System.Drawing.Size(344, 23);
+            this.txtPathFolderXml.TabIndex = 1;
+            // 
+            // grpTipoVisualizacao
+            // 
+            this.grpTipoVisualizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpTipoVisualizacao.Controls.Add(this.chkVisualizarPdf);
+            this.grpTipoVisualizacao.Location = new System.Drawing.Point(895, 12);
+            this.grpTipoVisualizacao.Name = "grpTipoVisualizacao";
+            this.grpTipoVisualizacao.Size = new System.Drawing.Size(127, 52);
+            this.grpTipoVisualizacao.TabIndex = 5;
+            this.grpTipoVisualizacao.TabStop = false;
+            this.grpTipoVisualizacao.Text = "Tipo de Visualização";
+            // 
+            // chkVisualizarPdf
+            // 
+            this.chkVisualizarPdf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkVisualizarPdf.AutoSize = true;
+            this.chkVisualizarPdf.Location = new System.Drawing.Point(7, 24);
+            this.chkVisualizarPdf.Name = "chkVisualizarPdf";
+            this.chkVisualizarPdf.Size = new System.Drawing.Size(47, 17);
+            this.chkVisualizarPdf.TabIndex = 1;
+            this.chkVisualizarPdf.Text = "PDF";
+            this.chkVisualizarPdf.UseVisualStyleBackColor = true;
+            // 
+            // grpPeriodo
+            // 
+            this.grpPeriodo.Controls.Add(this.dtaFim);
+            this.grpPeriodo.Controls.Add(this.dtaInicio);
+            this.grpPeriodo.Location = new System.Drawing.Point(12, 12);
+            this.grpPeriodo.Name = "grpPeriodo";
+            this.grpPeriodo.Size = new System.Drawing.Size(191, 52);
+            this.grpPeriodo.TabIndex = 1;
+            this.grpPeriodo.TabStop = false;
+            this.grpPeriodo.Text = "Período";
+            // 
+            // dtaFim
+            // 
+            this.dtaFim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtaFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtaFim.Location = new System.Drawing.Point(98, 20);
+            this.dtaFim.Name = "dtaFim";
+            this.dtaFim.Size = new System.Drawing.Size(86, 23);
+            this.dtaFim.TabIndex = 2;
+            this.dtaFim.Validating += new System.ComponentModel.CancelEventHandler(this.dtaFim_Validating);
+            // 
+            // dtaInicio
+            // 
+            this.dtaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtaInicio.Location = new System.Drawing.Point(6, 20);
+            this.dtaInicio.Name = "dtaInicio";
+            this.dtaInicio.Size = new System.Drawing.Size(86, 23);
+            this.dtaInicio.TabIndex = 1;
+            this.dtaInicio.Validating += new System.ComponentModel.CancelEventHandler(this.dtaInicio_Validating);
+            // 
+            // grpBuscar
+            // 
+            this.grpBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpBuscar.Controls.Add(this.btnBuscar);
+            this.grpBuscar.Location = new System.Drawing.Point(769, 12);
+            this.grpBuscar.Name = "grpBuscar";
+            this.grpBuscar.Size = new System.Drawing.Size(120, 52);
+            this.grpBuscar.TabIndex = 4;
+            this.grpBuscar.TabStop = false;
+            this.grpBuscar.Text = "Buscar NF-e";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(6, 18);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(108, 27);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // nNF
             // 
             this.nNF.HeaderText = "Número";
             this.nNF.Name = "nNF";
             this.nNF.ReadOnly = true;
             this.nNF.Width = 80;
+            // 
+            // mod
+            // 
+            this.mod.HeaderText = "Modelo";
+            this.mod.Name = "mod";
+            this.mod.ReadOnly = true;
+            this.mod.Width = 60;
             // 
             // dhEmi
             // 
@@ -160,124 +288,35 @@
             this.CEP.Name = "CEP";
             this.CEP.ReadOnly = true;
             // 
-            // grpCaminho
+            // grpInscricao
             // 
-            this.grpCaminho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpInscricao.Controls.Add(this.txtCpfCnpj);
+            this.grpInscricao.Location = new System.Drawing.Point(209, 12);
+            this.grpInscricao.Name = "grpInscricao";
+            this.grpInscricao.Size = new System.Drawing.Size(147, 52);
+            this.grpInscricao.TabIndex = 2;
+            this.grpInscricao.TabStop = false;
+            this.grpInscricao.Text = "Inscrição";
+            // 
+            // txtCpfCnpj
+            // 
+            this.txtCpfCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpCaminho.Controls.Add(this.btnLerFolderXml);
-            this.grpCaminho.Controls.Add(this.txtpathFolderXml);
-            this.grpCaminho.Location = new System.Drawing.Point(230, 12);
-            this.grpCaminho.Name = "grpCaminho";
-            this.grpCaminho.Size = new System.Drawing.Size(446, 52);
-            this.grpCaminho.TabIndex = 1;
-            this.grpCaminho.TabStop = false;
-            this.grpCaminho.Text = "Caminho dos arquivos";
-            // 
-            // btnLerFolderXml
-            // 
-            this.btnLerFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLerFolderXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLerFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLerFolderXml.Location = new System.Drawing.Point(401, 20);
-            this.btnLerFolderXml.Name = "btnLerFolderXml";
-            this.btnLerFolderXml.Size = new System.Drawing.Size(39, 23);
-            this.btnLerFolderXml.TabIndex = 2;
-            this.btnLerFolderXml.Text = "...";
-            this.btnLerFolderXml.UseVisualStyleBackColor = true;
-            this.btnLerFolderXml.Click += new System.EventHandler(this.btnLerFolderXml_Click);
-            // 
-            // txtpathFolderXml
-            // 
-            this.txtpathFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtpathFolderXml.BackColor = System.Drawing.SystemColors.Control;
-            this.txtpathFolderXml.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpathFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpathFolderXml.Location = new System.Drawing.Point(6, 20);
-            this.txtpathFolderXml.Name = "txtpathFolderXml";
-            this.txtpathFolderXml.Size = new System.Drawing.Size(389, 23);
-            this.txtpathFolderXml.TabIndex = 1;
-            this.txtpathFolderXml.TabStop = false;
-            // 
-            // grpTipoVisualizacao
-            // 
-            this.grpTipoVisualizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpTipoVisualizacao.Controls.Add(this.chkVisualizarPdf);
-            this.grpTipoVisualizacao.Location = new System.Drawing.Point(836, 12);
-            this.grpTipoVisualizacao.Name = "grpTipoVisualizacao";
-            this.grpTipoVisualizacao.Size = new System.Drawing.Size(186, 52);
-            this.grpTipoVisualizacao.TabIndex = 4;
-            this.grpTipoVisualizacao.TabStop = false;
-            this.grpTipoVisualizacao.Text = "Tipo de Visualização";
-            // 
-            // chkVisualizarPdf
-            // 
-            this.chkVisualizarPdf.AutoSize = true;
-            this.chkVisualizarPdf.Location = new System.Drawing.Point(7, 25);
-            this.chkVisualizarPdf.Name = "chkVisualizarPdf";
-            this.chkVisualizarPdf.Size = new System.Drawing.Size(47, 17);
-            this.chkVisualizarPdf.TabIndex = 0;
-            this.chkVisualizarPdf.Text = "PDF";
-            this.chkVisualizarPdf.UseVisualStyleBackColor = true;
-            // 
-            // grpPeriodo
-            // 
-            this.grpPeriodo.Controls.Add(this.dtaFim);
-            this.grpPeriodo.Controls.Add(this.dtaInicio);
-            this.grpPeriodo.Location = new System.Drawing.Point(12, 12);
-            this.grpPeriodo.Name = "grpPeriodo";
-            this.grpPeriodo.Size = new System.Drawing.Size(212, 52);
-            this.grpPeriodo.TabIndex = 0;
-            this.grpPeriodo.TabStop = false;
-            this.grpPeriodo.Text = "Período";
-            // 
-            // dtaFim
-            // 
-            this.dtaFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtaFim.Location = new System.Drawing.Point(107, 22);
-            this.dtaFim.Name = "dtaFim";
-            this.dtaFim.Size = new System.Drawing.Size(95, 20);
-            this.dtaFim.TabIndex = 1;
-            this.dtaFim.Validating += new System.ComponentModel.CancelEventHandler(this.dtaFim_Validating);
-            // 
-            // dtaInicio
-            // 
-            this.dtaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtaInicio.Location = new System.Drawing.Point(6, 22);
-            this.dtaInicio.Name = "dtaInicio";
-            this.dtaInicio.Size = new System.Drawing.Size(95, 20);
-            this.dtaInicio.TabIndex = 0;
-            this.dtaInicio.Validating += new System.ComponentModel.CancelEventHandler(this.dtaInicio_Validating);
-            // 
-            // grpBuscar
-            // 
-            this.grpBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpBuscar.Controls.Add(this.btnBuscar);
-            this.grpBuscar.Location = new System.Drawing.Point(682, 12);
-            this.grpBuscar.Name = "grpBuscar";
-            this.grpBuscar.Size = new System.Drawing.Size(148, 52);
-            this.grpBuscar.TabIndex = 3;
-            this.grpBuscar.TabStop = false;
-            this.grpBuscar.Text = "Buscar NF-e";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(6, 20);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(136, 23);
-            this.btnBuscar.TabIndex = 0;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtCpfCnpj.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCpfCnpj.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfCnpj.Location = new System.Drawing.Point(6, 20);
+            this.txtCpfCnpj.Name = "txtCpfCnpj";
+            this.txtCpfCnpj.Size = new System.Drawing.Size(135, 23);
+            this.txtCpfCnpj.TabIndex = 1;
+            this.txtCpfCnpj.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCpfCnpj_Validating);
             // 
             // FormImportarXMLNFe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1034, 561);
+            this.Controls.Add(this.grpInscricao);
             this.Controls.Add(this.grpBuscar);
             this.Controls.Add(this.grpPeriodo);
             this.Controls.Add(this.grpTipoVisualizacao);
@@ -287,7 +326,6 @@
             this.Name = "FormImportarXMLNFe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importar XML NFe/NFC-e";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.grpCaminho.ResumeLayout(false);
             this.grpCaminho.PerformLayout();
@@ -295,14 +333,27 @@
             this.grpTipoVisualizacao.PerformLayout();
             this.grpPeriodo.ResumeLayout(false);
             this.grpBuscar.ResumeLayout(false);
+            this.grpInscricao.ResumeLayout(false);
+            this.grpInscricao.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         public System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.GroupBox grpCaminho;
+        private System.Windows.Forms.Button btnLerFolderXml;
+        private System.Windows.Forms.TextBox txtPathFolderXml;
+        private System.Windows.Forms.GroupBox grpTipoVisualizacao;
+        private System.Windows.Forms.CheckBox chkVisualizarPdf;
+        private System.Windows.Forms.GroupBox grpPeriodo;
+        private System.Windows.Forms.DateTimePicker dtaFim;
+        private System.Windows.Forms.DateTimePicker dtaInicio;
+        private System.Windows.Forms.GroupBox grpBuscar;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn nNF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mod;
         private System.Windows.Forms.DataGridViewTextBoxColumn dhEmi;
         private System.Windows.Forms.DataGridViewTextBoxColumn vNF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Path;
@@ -311,16 +362,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn xMun;
         private System.Windows.Forms.DataGridViewTextBoxColumn UF;
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
-        private System.Windows.Forms.GroupBox grpCaminho;
-        private System.Windows.Forms.Button btnLerFolderXml;
-        private System.Windows.Forms.TextBox txtpathFolderXml;
-        private System.Windows.Forms.GroupBox grpTipoVisualizacao;
-        private System.Windows.Forms.CheckBox chkVisualizarPdf;
-        private System.Windows.Forms.GroupBox grpPeriodo;
-        private System.Windows.Forms.DateTimePicker dtaFim;
-        private System.Windows.Forms.DateTimePicker dtaInicio;
-        private System.Windows.Forms.GroupBox grpBuscar;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.GroupBox grpInscricao;
+        private System.Windows.Forms.TextBox txtCpfCnpj;
     }
 }
 

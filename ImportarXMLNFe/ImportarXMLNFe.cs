@@ -31,6 +31,7 @@ namespace ImportarXMLNFe
                     if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario == null)
                     {
                         dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.mod == "55" ? "NF-e" : "NFC-e",
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF,
                                               path);
@@ -38,6 +39,7 @@ namespace ImportarXMLNFe
                     else if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco == null)
                     {
                         dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.mod == "55" ? "NF-e" : "NFC-e",
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF, path,
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome,
@@ -46,6 +48,7 @@ namespace ImportarXMLNFe
                     else
                     {
                         dataGridView.Rows.Add(nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF,
+                                              nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.mod == "55" ? "NF-e" : "NFC-e",
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString(),
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Total.ICMSTotal.vNF, path,
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome,
@@ -65,7 +68,7 @@ namespace ImportarXMLNFe
                 if (chkVisualizarPdf.Checked)
                 {
                     ACBrNFe.LimparLista();
-                    ACBrNFe.CarregarXML(dataGridView.SelectedRows[0].Cells[3].Value.ToString());
+                    ACBrNFe.CarregarXML(dataGridView.SelectedRows[0].Cells[4].Value.ToString());
                     ACBrNFe.Imprimir(bMostrarPreview: true);
                 }
                 else
@@ -86,7 +89,7 @@ namespace ImportarXMLNFe
                     if (chkVisualizarPdf.Checked)
                     {
                         ACBrNFe.LimparLista();
-                        ACBrNFe.CarregarXML(dataGridView.SelectedRows[0].Cells[3].Value.ToString());
+                        ACBrNFe.CarregarXML(dataGridView.SelectedRows[0].Cells[4].Value.ToString());
                         ACBrNFe.Imprimir(bMostrarPreview: true);
                     }
                     else
@@ -102,9 +105,9 @@ namespace ImportarXMLNFe
         }
         private void btnLerFolderXml_Click(object sender, EventArgs e)
         {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                txtpathFolderXml.Text = folderBrowserDialog1.SelectedPath;
+                txtPathFolderXml.Text = folderBrowserDialog.SelectedPath;
             }
         }
 
@@ -136,14 +139,14 @@ namespace ImportarXMLNFe
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtpathFolderXml.Text))
+            if (string.IsNullOrEmpty(txtPathFolderXml.Text))
             {
                 MessageBox.Show("Não foi informado o caminho para os arquivos XML.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 btnLerFolderXml.Focus();
             }
             else
             {
-                BuscarXML(txtpathFolderXml.Text);
+                BuscarXML(txtPathFolderXml.Text);
             }
         }
 
@@ -160,7 +163,7 @@ namespace ImportarXMLNFe
                 listaNFeProc.Clear();
             foreach (FileInfo fileinfo in Arquivos)
             {
-                AtualizarGrid(serializable.GetObjectFromFile<NFeProc>(txtpathFolderXml.Text + "\\" + fileinfo.Name), txtpathFolderXml.Text + "\\" + fileinfo.Name);
+                AtualizarGrid(serializable.GetObjectFromFile<NFeProc>(txtPathFolderXml.Text + "\\" + fileinfo.Name), txtPathFolderXml.Text + "\\" + fileinfo.Name);
             }
             }
             catch (Exception)
@@ -171,6 +174,28 @@ namespace ImportarXMLNFe
             {
                 MessageBox.Show("Nenhuma XML de NF-e/NFC-e encontrado para o período informado!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public string FormatarCpfOuCnpj(string str)
+        {
+            if (str.Length == 11)
+            {
+                return Convert.ToUInt64(str).ToString(@"000\.000\.000\-00");
+            }
+            else if (str.Length == 14)
+            {
+                return Convert.ToUInt64(str).ToString(@"00\.000\.000\/0000\-00");
+            }
+            else
+            {
+                return "";
+            }
+
+        }
+
+        private void TxtCpfCnpj_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            txtCpfCnpj.Text = FormatarCpfOuCnpj(txtCpfCnpj.Text);
         }
     }
 }
