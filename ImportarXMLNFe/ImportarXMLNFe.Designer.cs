@@ -33,16 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormImportarXMLNFe));
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.grpCaminho = new System.Windows.Forms.GroupBox();
-            this.btnLerFolderXml = new System.Windows.Forms.Button();
-            this.txtPathFolderXml = new System.Windows.Forms.TextBox();
-            this.grpTipoVisualizacao = new System.Windows.Forms.GroupBox();
-            this.chkVisualizarPdf = new System.Windows.Forms.CheckBox();
-            this.grpPeriodo = new System.Windows.Forms.GroupBox();
-            this.dtaFim = new System.Windows.Forms.DateTimePicker();
-            this.dtaInicio = new System.Windows.Forms.DateTimePicker();
-            this.grpBuscar = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.nNF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dhEmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,14 +43,29 @@
             this.xMun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpCaminho = new System.Windows.Forms.GroupBox();
+            this.btnLerFolderXml = new System.Windows.Forms.Button();
+            this.txtPathFolderXml = new System.Windows.Forms.TextBox();
+            this.grpTipoVisualizacao = new System.Windows.Forms.GroupBox();
+            this.chkVisualizarPdf = new System.Windows.Forms.CheckBox();
+            this.grpPeriodo = new System.Windows.Forms.GroupBox();
+            this.dtaFim = new System.Windows.Forms.DateTimePicker();
+            this.dtaInicio = new System.Windows.Forms.DateTimePicker();
+            this.grpBuscar = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.grpInscricao = new System.Windows.Forms.GroupBox();
             this.txtCpfCnpj = new System.Windows.Forms.TextBox();
+            this.grpTipo = new System.Windows.Forms.GroupBox();
+            this.radioTodas = new System.Windows.Forms.RadioButton();
+            this.radioSaida = new System.Windows.Forms.RadioButton();
+            this.radioEntrada = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.grpCaminho.SuspendLayout();
             this.grpTipoVisualizacao.SuspendLayout();
             this.grpPeriodo.SuspendLayout();
             this.grpBuscar.SuspendLayout();
             this.grpInscricao.SuspendLayout();
+            this.grpTipo.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -92,16 +97,86 @@
             this.UF,
             this.CEP});
             this.dataGridView.EnableHeadersVisualStyles = false;
-            this.dataGridView.Location = new System.Drawing.Point(12, 70);
+            this.dataGridView.Location = new System.Drawing.Point(12, 128);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(1010, 479);
+            this.dataGridView.Size = new System.Drawing.Size(1010, 421);
             this.dataGridView.TabIndex = 3;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
+            // 
+            // nNF
+            // 
+            this.nNF.HeaderText = "Número";
+            this.nNF.Name = "nNF";
+            this.nNF.ReadOnly = true;
+            this.nNF.Width = 80;
+            // 
+            // mod
+            // 
+            this.mod.HeaderText = "Modelo";
+            this.mod.Name = "mod";
+            this.mod.ReadOnly = true;
+            this.mod.Width = 60;
+            // 
+            // dhEmi
+            // 
+            this.dhEmi.HeaderText = "Data Emissão";
+            this.dhEmi.Name = "dhEmi";
+            this.dhEmi.ReadOnly = true;
+            // 
+            // vNF
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.vNF.DefaultCellStyle = dataGridViewCellStyle2;
+            this.vNF.HeaderText = "Valor Nota Fiscal";
+            this.vNF.Name = "vNF";
+            this.vNF.ReadOnly = true;
+            this.vNF.Width = 120;
+            // 
+            // Path
+            // 
+            this.Path.HeaderText = "Path";
+            this.Path.Name = "Path";
+            this.Path.ReadOnly = true;
+            this.Path.Visible = false;
+            // 
+            // xNome
+            // 
+            this.xNome.HeaderText = "Nome Fantasia";
+            this.xNome.Name = "xNome";
+            this.xNome.ReadOnly = true;
+            this.xNome.Width = 300;
+            // 
+            // CpfCnpj
+            // 
+            this.CpfCnpj.HeaderText = "CPF/CNPJ";
+            this.CpfCnpj.Name = "CpfCnpj";
+            this.CpfCnpj.ReadOnly = true;
+            this.CpfCnpj.Width = 150;
+            // 
+            // xMun
+            // 
+            this.xMun.HeaderText = "Município";
+            this.xMun.Name = "xMun";
+            this.xMun.ReadOnly = true;
+            // 
+            // UF
+            // 
+            this.UF.HeaderText = "UF";
+            this.UF.Name = "UF";
+            this.UF.ReadOnly = true;
+            this.UF.Width = 50;
+            // 
+            // CEP
+            // 
+            this.CEP.HeaderText = "CEP";
+            this.CEP.Name = "CEP";
+            this.CEP.ReadOnly = true;
             // 
             // grpCaminho
             // 
@@ -218,76 +293,6 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // nNF
-            // 
-            this.nNF.HeaderText = "Número";
-            this.nNF.Name = "nNF";
-            this.nNF.ReadOnly = true;
-            this.nNF.Width = 80;
-            // 
-            // mod
-            // 
-            this.mod.HeaderText = "Modelo";
-            this.mod.Name = "mod";
-            this.mod.ReadOnly = true;
-            this.mod.Width = 60;
-            // 
-            // dhEmi
-            // 
-            this.dhEmi.HeaderText = "Data Emissão";
-            this.dhEmi.Name = "dhEmi";
-            this.dhEmi.ReadOnly = true;
-            // 
-            // vNF
-            // 
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.vNF.DefaultCellStyle = dataGridViewCellStyle2;
-            this.vNF.HeaderText = "Valor Nota Fiscal";
-            this.vNF.Name = "vNF";
-            this.vNF.ReadOnly = true;
-            this.vNF.Width = 120;
-            // 
-            // Path
-            // 
-            this.Path.HeaderText = "Path";
-            this.Path.Name = "Path";
-            this.Path.ReadOnly = true;
-            this.Path.Visible = false;
-            // 
-            // xNome
-            // 
-            this.xNome.HeaderText = "Nome Fantasia";
-            this.xNome.Name = "xNome";
-            this.xNome.ReadOnly = true;
-            this.xNome.Width = 300;
-            // 
-            // CpfCnpj
-            // 
-            this.CpfCnpj.HeaderText = "CPF/CNPJ";
-            this.CpfCnpj.Name = "CpfCnpj";
-            this.CpfCnpj.ReadOnly = true;
-            this.CpfCnpj.Width = 150;
-            // 
-            // xMun
-            // 
-            this.xMun.HeaderText = "Município";
-            this.xMun.Name = "xMun";
-            this.xMun.ReadOnly = true;
-            // 
-            // UF
-            // 
-            this.UF.HeaderText = "UF";
-            this.UF.Name = "UF";
-            this.UF.ReadOnly = true;
-            this.UF.Width = 50;
-            // 
-            // CEP
-            // 
-            this.CEP.HeaderText = "CEP";
-            this.CEP.Name = "CEP";
-            this.CEP.ReadOnly = true;
-            // 
             // grpInscricao
             // 
             this.grpInscricao.Controls.Add(this.txtCpfCnpj);
@@ -310,12 +315,58 @@
             this.txtCpfCnpj.TabIndex = 1;
             this.txtCpfCnpj.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCpfCnpj_Validating);
             // 
+            // grpTipo
+            // 
+            this.grpTipo.Controls.Add(this.radioTodas);
+            this.grpTipo.Controls.Add(this.radioSaida);
+            this.grpTipo.Controls.Add(this.radioEntrada);
+            this.grpTipo.Location = new System.Drawing.Point(12, 70);
+            this.grpTipo.Name = "grpTipo";
+            this.grpTipo.Size = new System.Drawing.Size(191, 52);
+            this.grpTipo.TabIndex = 6;
+            this.grpTipo.TabStop = false;
+            this.grpTipo.Text = "Tipo NFe/NFCe";
+            // 
+            // radioTodas
+            // 
+            this.radioTodas.AutoSize = true;
+            this.radioTodas.Location = new System.Drawing.Point(129, 18);
+            this.radioTodas.Name = "radioTodas";
+            this.radioTodas.Size = new System.Drawing.Size(55, 17);
+            this.radioTodas.TabIndex = 3;
+            this.radioTodas.Text = "Todas";
+            this.radioTodas.UseVisualStyleBackColor = true;
+            this.radioTodas.CheckedChanged += new System.EventHandler(this.radioTodas_CheckedChanged);
+            // 
+            // radioSaida
+            // 
+            this.radioSaida.AutoSize = true;
+            this.radioSaida.Checked = true;
+            this.radioSaida.Location = new System.Drawing.Point(74, 18);
+            this.radioSaida.Name = "radioSaida";
+            this.radioSaida.Size = new System.Drawing.Size(52, 17);
+            this.radioSaida.TabIndex = 2;
+            this.radioSaida.TabStop = true;
+            this.radioSaida.Text = "Saida";
+            this.radioSaida.UseVisualStyleBackColor = true;
+            // 
+            // radioEntrada
+            // 
+            this.radioEntrada.AutoSize = true;
+            this.radioEntrada.Location = new System.Drawing.Point(6, 18);
+            this.radioEntrada.Name = "radioEntrada";
+            this.radioEntrada.Size = new System.Drawing.Size(62, 17);
+            this.radioEntrada.TabIndex = 1;
+            this.radioEntrada.Text = "Entrada";
+            this.radioEntrada.UseVisualStyleBackColor = true;
+            // 
             // FormImportarXMLNFe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1034, 561);
+            this.Controls.Add(this.grpTipo);
             this.Controls.Add(this.grpInscricao);
             this.Controls.Add(this.grpBuscar);
             this.Controls.Add(this.grpPeriodo);
@@ -325,7 +376,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormImportarXMLNFe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Importar XML NFe/NFC-e";
+            this.Text = "Importar XML NFe/NFCe";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.grpCaminho.ResumeLayout(false);
             this.grpCaminho.PerformLayout();
@@ -335,6 +386,8 @@
             this.grpBuscar.ResumeLayout(false);
             this.grpInscricao.ResumeLayout(false);
             this.grpInscricao.PerformLayout();
+            this.grpTipo.ResumeLayout(false);
+            this.grpTipo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +417,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
         private System.Windows.Forms.GroupBox grpInscricao;
         private System.Windows.Forms.TextBox txtCpfCnpj;
+        private System.Windows.Forms.GroupBox grpTipo;
+        private System.Windows.Forms.RadioButton radioTodas;
+        private System.Windows.Forms.RadioButton radioSaida;
+        private System.Windows.Forms.RadioButton radioEntrada;
     }
 }
 

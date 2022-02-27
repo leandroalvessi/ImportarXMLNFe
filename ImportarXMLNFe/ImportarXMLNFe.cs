@@ -24,6 +24,28 @@ namespace ImportarXMLNFe
         {
             if (nfe != null)
             {
+                if (radioSaida.Checked)
+                {
+                    if (string.Join("", txtCpfCnpj.Text.Split('.', '-', '/')) != nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.CNPJ)
+                    {
+                        return;
+                    }
+                }
+                else if (radioEntrada.Checked)
+                {
+                    if (nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario != null)
+                    {
+                        if (string.Join("", txtCpfCnpj.Text.Split('.', '-', '/')) != (string.IsNullOrEmpty(nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ) ? nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CPF : nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ))
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
                 if ((nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.Date >= dtaInicio.Value) &&
                     (nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.Date <= dtaFim.Value))
                 {
@@ -58,7 +80,6 @@ namespace ImportarXMLNFe
                                               nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP);
                     }
                 }
-
             }
         }
         private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -139,6 +160,12 @@ namespace ImportarXMLNFe
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtCpfCnpj.Text))
+            {
+                MessageBox.Show("Para o tipo entrada ou saida de NFe/NFCe é necessário informar a inscrição.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCpfCnpj.Focus();
+                return;
+            }
             if (string.IsNullOrEmpty(txtPathFolderXml.Text))
             {
                 MessageBox.Show("Não foi informado o caminho para os arquivos XML.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -196,6 +223,14 @@ namespace ImportarXMLNFe
         private void TxtCpfCnpj_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             txtCpfCnpj.Text = FormatarCpfOuCnpj(txtCpfCnpj.Text);
+        }
+
+        private void radioTodas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioTodas.Checked)
+            {
+                txtCpfCnpj.Text = "";
+            }
         }
     }
 }
