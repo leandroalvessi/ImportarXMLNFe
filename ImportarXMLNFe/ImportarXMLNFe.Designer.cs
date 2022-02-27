@@ -97,13 +97,13 @@
             this.UF,
             this.CEP});
             this.dataGridView.EnableHeadersVisualStyles = false;
-            this.dataGridView.Location = new System.Drawing.Point(12, 128);
+            this.dataGridView.Location = new System.Drawing.Point(12, 70);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(1010, 421);
+            this.dataGridView.Size = new System.Drawing.Size(1010, 479);
             this.dataGridView.TabIndex = 3;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_KeyDown);
@@ -184,10 +184,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCaminho.Controls.Add(this.btnLerFolderXml);
             this.grpCaminho.Controls.Add(this.txtPathFolderXml);
-            this.grpCaminho.Location = new System.Drawing.Point(362, 12);
+            this.grpCaminho.Location = new System.Drawing.Point(554, 12);
             this.grpCaminho.Name = "grpCaminho";
-            this.grpCaminho.Size = new System.Drawing.Size(401, 52);
-            this.grpCaminho.TabIndex = 2;
+            this.grpCaminho.Size = new System.Drawing.Size(246, 52);
+            this.grpCaminho.TabIndex = 4;
             this.grpCaminho.TabStop = false;
             this.grpCaminho.Text = "Caminho dos arquivos";
             // 
@@ -196,7 +196,7 @@
             this.btnLerFolderXml.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLerFolderXml.BackColor = System.Drawing.SystemColors.Window;
             this.btnLerFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLerFolderXml.Location = new System.Drawing.Point(356, 18);
+            this.btnLerFolderXml.Location = new System.Drawing.Point(201, 18);
             this.btnLerFolderXml.Name = "btnLerFolderXml";
             this.btnLerFolderXml.Size = new System.Drawing.Size(39, 27);
             this.btnLerFolderXml.TabIndex = 2;
@@ -212,17 +212,17 @@
             this.txtPathFolderXml.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPathFolderXml.Location = new System.Drawing.Point(6, 20);
             this.txtPathFolderXml.Name = "txtPathFolderXml";
-            this.txtPathFolderXml.Size = new System.Drawing.Size(344, 23);
+            this.txtPathFolderXml.Size = new System.Drawing.Size(189, 23);
             this.txtPathFolderXml.TabIndex = 1;
             // 
             // grpTipoVisualizacao
             // 
             this.grpTipoVisualizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grpTipoVisualizacao.Controls.Add(this.chkVisualizarPdf);
-            this.grpTipoVisualizacao.Location = new System.Drawing.Point(895, 12);
+            this.grpTipoVisualizacao.Location = new System.Drawing.Point(900, 12);
             this.grpTipoVisualizacao.Name = "grpTipoVisualizacao";
-            this.grpTipoVisualizacao.Size = new System.Drawing.Size(127, 52);
-            this.grpTipoVisualizacao.TabIndex = 5;
+            this.grpTipoVisualizacao.Size = new System.Drawing.Size(122, 52);
+            this.grpTipoVisualizacao.TabIndex = 6;
             this.grpTipoVisualizacao.TabStop = false;
             this.grpTipoVisualizacao.Text = "Tipo de Visualização";
             // 
@@ -273,10 +273,10 @@
             // 
             this.grpBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBuscar.Controls.Add(this.btnBuscar);
-            this.grpBuscar.Location = new System.Drawing.Point(769, 12);
+            this.grpBuscar.Location = new System.Drawing.Point(806, 12);
             this.grpBuscar.Name = "grpBuscar";
-            this.grpBuscar.Size = new System.Drawing.Size(120, 52);
-            this.grpBuscar.TabIndex = 4;
+            this.grpBuscar.Size = new System.Drawing.Size(88, 52);
+            this.grpBuscar.TabIndex = 5;
             this.grpBuscar.TabStop = false;
             this.grpBuscar.Text = "Buscar NF-e";
             // 
@@ -287,7 +287,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(6, 18);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(108, 27);
+            this.btnBuscar.Size = new System.Drawing.Size(76, 27);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -320,10 +320,10 @@
             this.grpTipo.Controls.Add(this.radioTodas);
             this.grpTipo.Controls.Add(this.radioSaida);
             this.grpTipo.Controls.Add(this.radioEntrada);
-            this.grpTipo.Location = new System.Drawing.Point(12, 70);
+            this.grpTipo.Location = new System.Drawing.Point(362, 12);
             this.grpTipo.Name = "grpTipo";
-            this.grpTipo.Size = new System.Drawing.Size(191, 52);
-            this.grpTipo.TabIndex = 6;
+            this.grpTipo.Size = new System.Drawing.Size(186, 52);
+            this.grpTipo.TabIndex = 3;
             this.grpTipo.TabStop = false;
             this.grpTipo.Text = "Tipo NFe/NFCe";
             // 
@@ -377,6 +377,7 @@
             this.Name = "FormImportarXMLNFe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importar XML NFe/NFCe";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.grpCaminho.ResumeLayout(false);
             this.grpCaminho.PerformLayout();
