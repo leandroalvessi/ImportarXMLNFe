@@ -151,7 +151,7 @@
             this.txtSerie.Location = new System.Drawing.Point(221, 79);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.ReadOnly = true;
-            this.txtSerie.Size = new System.Drawing.Size(45, 23);
+            this.txtSerie.Size = new System.Drawing.Size(65, 23);
             this.txtSerie.TabIndex = 4;
             // 
             // txtModelo
@@ -161,7 +161,7 @@
             this.txtModelo.Location = new System.Drawing.Point(136, 79);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.ReadOnly = true;
-            this.txtModelo.Size = new System.Drawing.Size(45, 23);
+            this.txtModelo.Size = new System.Drawing.Size(79, 23);
             this.txtModelo.TabIndex = 3;
             // 
             // txtNumero
@@ -171,7 +171,7 @@
             this.txtNumero.Location = new System.Drawing.Point(11, 79);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.ReadOnly = true;
-            this.txtNumero.Size = new System.Drawing.Size(103, 23);
+            this.txtNumero.Size = new System.Drawing.Size(119, 23);
             this.txtNumero.TabIndex = 2;
             // 
             // lblData
@@ -299,7 +299,7 @@
             this.txtMunicipioEmitente.Location = new System.Drawing.Point(11, 75);
             this.txtMunicipioEmitente.Name = "txtMunicipioEmitente";
             this.txtMunicipioEmitente.ReadOnly = true;
-            this.txtMunicipioEmitente.Size = new System.Drawing.Size(277, 22);
+            this.txtMunicipioEmitente.Size = new System.Drawing.Size(281, 22);
             this.txtMunicipioEmitente.TabIndex = 7;
             // 
             // lblMunicipioEmitente
@@ -339,7 +339,7 @@
             this.txtLogradouroEmitente.Location = new System.Drawing.Point(11, 34);
             this.txtLogradouroEmitente.Name = "txtLogradouroEmitente";
             this.txtLogradouroEmitente.ReadOnly = true;
-            this.txtLogradouroEmitente.Size = new System.Drawing.Size(277, 22);
+            this.txtLogradouroEmitente.Size = new System.Drawing.Size(281, 22);
             this.txtLogradouroEmitente.TabIndex = 5;
             // 
             // lblLogradouro
@@ -355,17 +355,17 @@
             // txtInscricaoEstadual
             // 
             this.txtInscricaoEstadual.BackColor = System.Drawing.SystemColors.Window;
-            this.txtInscricaoEstadual.Location = new System.Drawing.Point(239, 107);
+            this.txtInscricaoEstadual.Location = new System.Drawing.Point(217, 107);
             this.txtInscricaoEstadual.Name = "txtInscricaoEstadual";
             this.txtInscricaoEstadual.ReadOnly = true;
-            this.txtInscricaoEstadual.Size = new System.Drawing.Size(142, 22);
+            this.txtInscricaoEstadual.Size = new System.Drawing.Size(164, 22);
             this.txtInscricaoEstadual.TabIndex = 4;
             // 
             // lblInscricaoEstadual
             // 
             this.lblInscricaoEstadual.AutoSize = true;
             this.lblInscricaoEstadual.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInscricaoEstadual.Location = new System.Drawing.Point(236, 91);
+            this.lblInscricaoEstadual.Location = new System.Drawing.Point(214, 91);
             this.lblInscricaoEstadual.Name = "lblInscricaoEstadual";
             this.lblInscricaoEstadual.Size = new System.Drawing.Size(99, 13);
             this.lblInscricaoEstadual.TabIndex = 8;
@@ -377,7 +377,7 @@
             this.txtCpfCnpjEmitente.Location = new System.Drawing.Point(11, 107);
             this.txtCpfCnpjEmitente.Name = "txtCpfCnpjEmitente";
             this.txtCpfCnpjEmitente.ReadOnly = true;
-            this.txtCpfCnpjEmitente.Size = new System.Drawing.Size(131, 22);
+            this.txtCpfCnpjEmitente.Size = new System.Drawing.Size(200, 22);
             this.txtCpfCnpjEmitente.TabIndex = 3;
             // 
             // lblCpfCnpj
@@ -514,7 +514,7 @@
             this.txtDestCEP.Location = new System.Drawing.Point(11, 116);
             this.txtDestCEP.Name = "txtDestCEP";
             this.txtDestCEP.ReadOnly = true;
-            this.txtDestCEP.Size = new System.Drawing.Size(119, 22);
+            this.txtDestCEP.Size = new System.Drawing.Size(122, 22);
             this.txtDestCEP.TabIndex = 8;
             // 
             // lblDestCEP
@@ -554,7 +554,7 @@
             this.txtDestMunicipio.Location = new System.Drawing.Point(11, 75);
             this.txtDestMunicipio.Name = "txtDestMunicipio";
             this.txtDestMunicipio.ReadOnly = true;
-            this.txtDestMunicipio.Size = new System.Drawing.Size(277, 22);
+            this.txtDestMunicipio.Size = new System.Drawing.Size(281, 22);
             this.txtDestMunicipio.TabIndex = 6;
             // 
             // lblDestMunicipio
@@ -594,7 +594,7 @@
             this.txtDestLogradouro.Location = new System.Drawing.Point(11, 34);
             this.txtDestLogradouro.Name = "txtDestLogradouro";
             this.txtDestLogradouro.ReadOnly = true;
-            this.txtDestLogradouro.Size = new System.Drawing.Size(277, 22);
+            this.txtDestLogradouro.Size = new System.Drawing.Size(281, 22);
             this.txtDestLogradouro.TabIndex = 4;
             // 
             // lblDestLogradouro
@@ -613,7 +613,7 @@
             this.txtDestCpfCnpj.Location = new System.Drawing.Point(11, 69);
             this.txtDestCpfCnpj.Name = "txtDestCpfCnpj";
             this.txtDestCpfCnpj.ReadOnly = true;
-            this.txtDestCpfCnpj.Size = new System.Drawing.Size(131, 22);
+            this.txtDestCpfCnpj.Size = new System.Drawing.Size(134, 22);
             this.txtDestCpfCnpj.TabIndex = 2;
             // 
             // lblDestCpfCnpj

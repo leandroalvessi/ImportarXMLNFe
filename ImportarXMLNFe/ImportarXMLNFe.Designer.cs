@@ -301,7 +301,7 @@
             this.grpInscricao.Size = new System.Drawing.Size(147, 52);
             this.grpInscricao.TabIndex = 2;
             this.grpInscricao.TabStop = false;
-            this.grpInscricao.Text = "Inscrição";
+            this.grpInscricao.Text = "CPF/CNPJ";
             // 
             // txtCpfCnpj
             // 

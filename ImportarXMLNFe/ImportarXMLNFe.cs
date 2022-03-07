@@ -160,6 +160,10 @@ namespace ImportarXMLNFe
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (radioTodas.Checked)
+            {
+                txtCpfCnpj.Clear();
+            }
             if ((string.IsNullOrEmpty(txtCpfCnpj.Text)) && (radioEntrada.Checked || radioSaida.Checked))
             {
                 MessageBox.Show("Para o tipo entrada ou saida de NFe/NFCe é necessário informar a inscrição.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
